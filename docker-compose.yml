@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8888
+    volumes:
+      - .:/whatsapp_api
+    ports:
+      - "8888:8888"
+    environment:
+    - PYTHONUNBUFFERED=1
+    - OPENAI_TOKEN=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
+    - ASSISTANT_ID=asst_bgtcLFGwaYF50AYn7PMmbJ1P
+    - WHATSAPP_TOKEN=EAAa9OsVfmsoBOwe03UnXOO5GLmzjtQosEhX35hhWvhAUeN4FTrVoJMgoLwySyYBMgSaiIvI8i1DoYSxlUjL6bWZAG1Kjx9aZCsZBGOxjlo2fjNMmQRzqshOxLdiIDmTHHDUAZAkUvAy1P4g7fhge4oPY7E0z7FCZC4IdNcAZApzWXonmUyQ2sGqv34bLeViB6U
